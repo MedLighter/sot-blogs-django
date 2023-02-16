@@ -1,0 +1,213 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block content %}
+    <header>
+    <div class="header_menu">
+      <div class="logo">
+        <a href="{% url 'index' %}">
+          <span style="font-size: 200%;">
+            <div class="logophoto">
+              <img src="{% static 'main/img/logo.png' %}" width="64" height="64">
+            </div>
+            Sea of Thieves Wiki
+          </span>
+        </a>
+      </div>
+        <nav class="one">
+            <ul class="topmenu">
+              <li><a href="{% url 'items' %}">Предметы<i class="fa fa-angle-down"></i></a>
+              <ul class="submenu">
+                <li><a href="">Сундуки</a></li>
+                <li><a href="">Оружие</a></li>
+              </ul>
+              </li>
+              <li><a href="{% url 'ships' %}">Корабли</a></li>
+              <li><a href="{% url 'npc' %}">Существа<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="">Обычные</a></li>
+                  <li><a href="">Уникальные</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'storytellings' %}">Истории<i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="">Сезоны</a></li>
+                    <li><a href="">Tall Tales</a></li>
+                </ul>
+                </li>
+              <li><a href="{% url 'achivments' %}">Достижения</a></li>
+            </ul>
+          </nav>
+
+        <div class="search">
+        <form>
+          <input class="in-put" type="text" placeholder="Искать здесь...">
+          <button id="button0" type="submit"></button>
+        </form>
+      </div>
+    </div>
+  </header>
+    <div class="blockmain">
+        <div class="headname">
+            <p>Достижения</p>
+        </div>
+    </div>
+    <div class="block_main_1">
+        <div class="post-wrap">
+            <div class="post-item">
+                <div class="item-content">
+                    <div class="item-icon-group"></div>
+                    <div class="item-body">
+                        <img src="{% static 'main/img/shlup.png' %}" alt="1"
+                            style="margin-right: 50px;float:left;width: 175px; height: 175px;" />
+                        <h3>Шлюпка</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum consequuntur dolorem
+                            tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus distinctio
+                            eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere earum
+                            impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum placeat
+                            repudiandae modi.</p>
+                        <div class="item-footer">
+                            <button id="button1">ОТКРЫТЬ<i class="fa fa-angle-down"></i></button>
+                        </div>
+                        <div id="rect1">
+                            <p>123123123Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-wrap">
+            <div class="post-item">
+                <div class="item-content">
+                    <div class="item-icon-group"></div>
+                    <div class="item-body">
+                        <img src="{% static 'main/img/briga.jpg' %}" alt="1"
+                            style="margin-right: 50px;float:left;width: 175px; height: 175px;" />
+                        <h3>Бригантина</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum consequuntur dolorem
+                            tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus distinctio
+                            eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere earum
+                            impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum placeat
+                            repudiandae modi.</p>
+                        <div class="item-footer">
+                            <button id="button2">ОТКРЫТЬ<i class="fa fa-angle-down"></i></button>
+                        </div>
+                        <div id="rect2">
+                            <p>123123123Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post-wrap">
+            <div class="post-item">
+                <div class="item-content">
+                    <div class="item-icon-group"></div>
+                    <div class="item-body">
+                        <img src="{% static 'main/img/galeon.jpg' %}" alt="1"
+                            style="margin-right: 50px;float:left;width: 175px; height: 175px;" />
+                        <h3>Галеон</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum consequuntur dolorem
+                            tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus distinctio
+                            eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere earum
+                            impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum placeat
+                            repudiandae modi.</p>
+                        <div class="item-footer">
+                            <button id="button3">ОТКРЫТЬ<i class="fa fa-angle-down"></i></button>
+                        </div>
+                        <div id="rect3">
+                            <p>123123123Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum
+                                consequuntur dolorem
+                                tempore accusantium doloribus, itaque sapiente a? Reiciendis ipsa fugit ducimus
+                                distinctio
+                                eos voluptatibus, itaque quod natus mollitia incidunt. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Consequatur repudiandae itaque sed! Laboriosam facere
+                                earum
+                                impedit totam accusantium fugit tenetur tempora quod ratione nulla rem esse, dolorum
+                                placeat
+                                repudiandae modi.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
