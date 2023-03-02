@@ -6,13 +6,58 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--    <link rel="stylesheet" href="{% static 'main/vendor/bootstrap/css/bootstrap.css' %}">-->
-    <!--    <script src="{% static 'main/vendor/bootstrap/js/bootstrap.min.js' %}"></script>-->
+{#    <link rel="stylesheet" href="{% static 'main/vendor/bootstrap/css/bootstrap.css' %}">#}
+{#    <script src="{% static 'main/vendor/bootstrap/js/bootstrap.min.js' %}"></script>#}
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <script src="https://kit.fontawesome.com/cf5ef8a0fd.js" crossorigin="anonymous"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <header>
+        <div class="header_menu">
+          <div class="logo">
+            <a href="{% url 'index' %}">
+              <span style="font-size: 200%;">
+                <div class="logophoto">
+                  <img src="{% static 'main/img/logo.png' %}" width="64" height="64">
+                </div>
+                Sea of Thieves Wiki
+              </span>
+            </a>
+          </div>
+            <nav class="one">
+                <ul class="topmenu">
+                  <li><a href="{% url 'items' %}">Предметы<i class="fa fa-angle-down"></i></a>
+                  <ul class="submenu">
+                    <li><a href="">Сундуки</a></li>
+                    <li><a href="">Оружие</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="{% url 'ships' %}">Корабли</a></li>
+                  <li><a href="{% url 'npc' %}">Существа<i class="fa fa-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li><a href="">Обычные</a></li>
+                      <li><a href="">Уникальные</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="{% url 'storytellings' %}">Истории<i class="fa fa-angle-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Сезоны</a></li>
+                        <li><a href="">Tall Tales</a></li>
+                    </ul>
+                    </li>
+                  <li><a href="{% url 'achivments' %}">Достижения</a></li>
+                </ul>
+              </nav>
+
+            <div class="search">
+            <form>
+              <input class="in-put" type="text" placeholder="Искать здесь...">
+              <button id="button0" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </header>
     {% block content %}
     {% endblock %}
 </body>

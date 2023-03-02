@@ -1,51 +1,6 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 {% block content %}
-    <header>
-    <div class="header_menu">
-      <div class="logo">
-        <a href="{% url 'index' %}">
-          <span style="font-size: 200%;">
-            <div class="logophoto">
-              <img src="{% static 'main/img/logo.png' %}" width="64" height="64">
-            </div>
-            Sea of Thieves Wiki
-          </span>
-        </a>
-      </div>
-        <nav class="one">
-            <ul class="topmenu">
-              <li><a href="{% url 'items' %}">Предметы<i class="fa fa-angle-down"></i></a>
-              <ul class="submenu">
-                <li><a href="">Сундуки</a></li>
-                <li><a href="">Оружие</a></li>
-              </ul>
-              </li>
-              <li><a href="{% url 'ships' %}">Корабли</a></li>
-              <li><a href="{% url 'npc' %}">Существа<i class="fa fa-angle-down"></i></a>
-                <ul class="submenu">
-                  <li><a href="">Обычные</a></li>
-                  <li><a href="">Уникальные</a></li>
-                </ul>
-              </li>
-              <li><a href="{% url 'storytellings' %}">Истории<i class="fa fa-angle-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="">Сезоны</a></li>
-                    <li><a href="">Tall Tales</a></li>
-                </ul>
-                </li>
-              <li><a href="{% url 'achivments' %}">Достижения</a></li>
-            </ul>
-          </nav>
-
-        <div class="search">
-        <form>
-          <input class="in-put" type="text" placeholder="Искать здесь...">
-          <button id="button0" type="submit"></button>
-        </form>
-      </div>
-    </div>
-  </header>
     <div class="blockmain">
         <div class="headname">
             <p>Достижения</p>
