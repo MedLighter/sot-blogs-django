@@ -35,12 +35,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/works/manage.py/perfumeshop",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+    "last_opened_file_path": "C:/works/ForumSOT-server/ForumSOT/main/templates/main",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "two.files.diff.last.used.file": "C:/works/ForumSOT-server/ForumSOT/main/templates/main/items.html"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\works\ForumSOT-server\ForumSOT\main\templates\main" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\users" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\main" />
     </key>
@@ -52,6 +54,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="app.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -95,6 +98,7 @@
       <workItem from="1678470550649" duration="9810000" />
       <workItem from="1678515381792" duration="1417000" />
       <workItem from="1678545306683" duration="27000" />
+      <workItem from="1678631526451" duration="4390000" />
     </task>
     <servers />
   </component>

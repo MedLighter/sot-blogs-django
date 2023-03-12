@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'main.apps.MainConfig',
     'users.apps.UsersConfig',
+    'blogs.apps.BlogsConfig',
     'bootstrap5',
 
     'django.contrib.postgres',
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ForumSOT.urls'
+ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
     {
