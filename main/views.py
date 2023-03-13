@@ -2,30 +2,54 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'main/index.html')
+    context = {
+        'title': 'Главная'
+    }
+    return render(request, 'main/index.html', context)
 
 
 def achivments(request):
-    return render(request, 'main/achivments.html')
+    context = {
+        'title': 'Достижения'
+    }
+    return render(request, 'main/achivments.html', context)
 
 
 def items_chests(request):
-    return render(request, 'main/items_chests.html')
+    context = {
+        'title': 'Сундуки'
+    }
+    return render(request, 'main/items_chests.html', context)
 
 def items_weapons(request):
-    return render(request, 'main/items_weapons.html')
+    context = {
+        'title': 'Оружие'
+    }
+    return render(request, 'main/items_weapons.html', context)
 
 
 def npc(request):
-    return render(request, 'main/npc.html')
+    context = {
+        'title': 'Существа'
+    }
+    return render(request, 'main/npc.html', context)
 
 
 def ships(request):
-    return render(request, 'main/ships.html')
+    context = {
+        'title': 'Корабли'
+    }
+    return render(request, 'main/ships.html', context)
 
 
 def storytellings_seasons(request):
-    return render(request, 'main/storytellings_seasons.html')
+    context = {
+        'title': 'Сезоны'
+    }
+    return render(request, 'main/storytellings_seasons.html', context)
 
 def storytellings_TallTales(request):
-    return render(request, 'main/storytellings_TallTales.html')
+    context = {
+        'title': 'TallTales'
+    }
+    return render(request, 'main/storytellings_TallTales.html', context)

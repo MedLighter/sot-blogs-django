@@ -13,8 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,16 +36,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/works/ForumSOT-server/ForumSOT/main/templates/main",
+    "last_opened_file_path": "C:/works/ForumSOT-server/ForumSOT/main/static/main/css",
+    "list.type.of.created.stylesheet": "CSS",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "two.files.diff.last.used.file": "C:/works/ForumSOT-server/ForumSOT/main/templates/main/items.html"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\works\ForumSOT-server\ForumSOT\main\static\main\css" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\main\templates\main" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\users" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\works\ForumSOT-server\ForumSOT\blogs\templates\blogs" />
     </key>
   </component>
   <component name="RunManager">
@@ -99,6 +105,7 @@
       <workItem from="1678515381792" duration="1417000" />
       <workItem from="1678545306683" duration="27000" />
       <workItem from="1678631526451" duration="4390000" />
+      <workItem from="1678685958306" duration="12237000" />
     </task>
     <servers />
   </component>

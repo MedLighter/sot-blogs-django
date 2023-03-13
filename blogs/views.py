@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def news(request):
+    context = {
+        'title': 'Новости'
+    }
+    return render(request, 'blogs/news.html', context)

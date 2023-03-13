@@ -10,7 +10,7 @@
 {#    <script src="{% static 'main/vendor/bootstrap/js/bootstrap.min.js' %}"></script>#}
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <script src="https://kit.fontawesome.com/cf5ef8a0fd.js" crossorigin="anonymous"></script>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <header>
@@ -27,6 +27,7 @@
           </div>
             <nav class="one">
                 <ul class="topmenu">
+                    <li><a href="{% url 'blogs:news' %}">Новости</a></li>
                   <li><a href="{% url 'main:items_chests' %}">Предметы<i class="fa fa-angle-down"></i></a>
                   <ul class="submenu">
                     <li><a href="{% url 'main:items_chests' %}">Сундуки</a></li>
