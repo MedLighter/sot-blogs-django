@@ -777,7 +777,7 @@ ul {
   opacity: 1;
 }
 
-a {
+.header_menu a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
@@ -824,6 +824,110 @@ a {
 
 .one ul li:hover .submenu {
   display: block;
+}
+
+/* Profile */
+.profile{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    left: 1560px;
+    top: 170px;
+    background: rgba(21, 23, 24, 0.65);
+    border-radius: 30px 30px 15px 15px;
+}
+
+.profile-headname{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #151718;
+    border-radius: 30px 30px 0px 0px;
+    /* Text */
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #C6A689;
+}
+
+.profile-headname p{
+    padding-top: 5%;
+}
+
+.nav-profile{
+    margin-top: 65px;
+    margin-left: 5%;
+    font-size: 17px;
+    color: #C6A689;
+}
+
+.nav-profile a{
+    color: #c6a689;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-profile li{
+    margin-bottom: 20px;
+}
+
+.fa-circle {
+    font-size: 50%;
+    position: absolute;
+    margin-right: -25%;
+}
+
+.custom-auth{
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0.7;
+}
+
+/* profile block */
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+.custom-mt{
+  margin-top: 5rem;
 }
 
 

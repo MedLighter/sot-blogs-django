@@ -6,10 +6,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-{#    <link rel="stylesheet" href="{% static 'main/vendor/bootstrap/css/bootstrap.css' %}">#}
-{#    <script src="{% static 'main/vendor/bootstrap/js/bootstrap.min.js' %}"></script>#}
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <script src="https://kit.fontawesome.com/cf5ef8a0fd.js" crossorigin="anonymous"></script>
+    {% block css %}
+    {% endblock %}
     <title>{{ title }}</title>
 </head>
 <body>
@@ -53,7 +53,46 @@
             </form>
           </div>
         </div>
-      </header>
+    </header>
+    <div class="profile">
+        {% if user.is_anonymous %}
+            <div class="profile-headname">
+                <p>Нет аккаунта?</p>
+            </div>
+            <div class="nav-profile">
+                <li><a href="{% url 'users:login' %}">Войти</a></li>
+                <li><a href="{% url 'users:registration' %}">Зарегистрироваться</a></li>
+            </div>
+        {% else %}
+            <div class="profile-headname">
+                <p>Профиль</p>
+            </div>
+            <div class="nav-profile">
+                <li><a href="{% url 'users:profile' %}">Аккаунт</a></li>
+                <li><a href="">Создать статью</a></li>
+                <li><a href="">Мои статьи</a></li>
+
+                {% if user.is_staff %}
+                    <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
+                {% endif %}
+                <li><a href="{% url 'users:logout' %}">Выйти</a></li>
+            </div>
+        {% endif %}
+
+{#        <div class="nav-profile">#}
+{#            {% if user.is_anonymous %}#}
+{#                <p><li>Войти</li></p>#}
+{#                <p><li>Зарегистрироваться</li></p>#}
+{#            {% else %}#}
+{#                <p><li>Аккаунт</li></p>#}
+{#                <p><li>Создать статью</li></p>#}
+{#                <p><li>Мои статьи</li></p>#}
+{#                {% if user.is_staff %}#}
+{#                    <p><li>Админ панель</li></p>#}
+{#                {% endif %}#}
+{#            {% endif %}#}
+{#        </div>#}
+    </div>
     {% block content %}
     {% endblock %}
 </body>

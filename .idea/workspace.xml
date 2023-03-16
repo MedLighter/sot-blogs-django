@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -30,18 +30,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/works/ForumSOT-server/ForumSOT/main/static/main/css",
-    "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "two.files.diff.last.used.file": "C:/works/ForumSOT-server/ForumSOT/main/templates/main/items.html"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/works/caseph-server/casephone&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/works/ForumSOT-server/ForumSOT/main/templates/main/items.html&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\works\ForumSOT-server\ForumSOT\main\static\main\css" />
@@ -106,6 +106,10 @@
       <workItem from="1678545306683" duration="27000" />
       <workItem from="1678631526451" duration="4390000" />
       <workItem from="1678685958306" duration="12237000" />
+      <workItem from="1678777280738" duration="831000" />
+      <workItem from="1678810642627" duration="599000" />
+      <workItem from="1678867296180" duration="12441000" />
+      <workItem from="1678934397053" duration="2687000" />
     </task>
     <servers />
   </component>
