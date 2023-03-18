@@ -1,7 +1,7 @@
 {% extends 'main/layout.html' %}
 
 {% block css %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 {% endblock %}
 
 {% block content %}
@@ -12,71 +12,31 @@
     </div>
     <div class="block_main_1">
         <div class="post-wrap">
-            <div class="post-item">
-                <div class="item-content">
-                    <div class="item-body">
-
-                        <div class="container rounded custom-mt mb-5">
-                            <div class="row">
-                                <div class="col-md-3 border-right">
-                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
-                                </div>
-                                <div class="col-md-8 border-right">
-                                    <div class="p-3 py-5">
-                                        <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <h4 class="text-right">Profile Settings</h4>
-                                        </div>
-                                        <div class="row mt-2">
-                                            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                                            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-12">
-                                                <label class="labels">Mobile Number</label>
-                                                <input type="text" class="form-control" placeholder="enter phone number" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Address Line 1</label>
-                                                <input type="text" class="form-control" placeholder="enter address line 1" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Address Line 2</label>
-                                                <input type="text" class="form-control" placeholder="enter address line 2" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Postcode</label>
-                                                <input type="text" class="form-control" placeholder="enter address line 2" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">State</label>
-                                                <input type="text" class="form-control" placeholder="enter address line 2" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Area</label>
-                                                <input type="text" class="form-control" placeholder="enter address line 2" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Email ID</label>
-                                                <input type="text" class="form-control" placeholder="enter email id" value="">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label class="labels">Education</label>
-                                                <input type="text" class="form-control" placeholder="education" value="">
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                                            <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
-                                        </div>
-                                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+            <form class="form-block" action="{% url 'users:profile' %}" method="put">
+                {% csrf_token %}
+                <div class="form-item">
+                    <label for="{{ form.first_name.id_for_label }}">Имя:</label>
+                    {{ form.first_name }}
                 </div>
-            </div>
+                <div class="form-item">
+                    <label class="small mb-1" for="{{ form.last_name.id_for_label }}">Фамилия:</label>
+                    {{ form.last_name }}
+                </div>
+                <div class="form-item">
+                    <label class="custom-file-upload" for="{{ form.image.id_for_label }}">Выберите изображение:</label>
+                    {{ form.image }}
+                </div>
+                <div class="form-item">
+                    <label for="{{ form.username.id_for_label }}">Имя пользователя:</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-item">
+                    <label for="{{ form.email.id_for_label }}">Адрес электронной почты:</label>
+                    {{ form.email }}
+                </div>
+
+                <input type="submit" value="Сохранить">
+            </form>
         </div>
     </div>
 

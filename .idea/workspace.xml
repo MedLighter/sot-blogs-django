@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -50,6 +50,7 @@
       <recent name="C:\works\ForumSOT-server\ForumSOT\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\works\ForumSOT-server\ForumSOT\main\static\main\js" />
       <recent name="C:\works\ForumSOT-server\ForumSOT\blogs\templates\blogs" />
     </key>
   </component>
@@ -109,7 +110,9 @@
       <workItem from="1678777280738" duration="831000" />
       <workItem from="1678810642627" duration="599000" />
       <workItem from="1678867296180" duration="12441000" />
-      <workItem from="1678934397053" duration="2687000" />
+      <workItem from="1678934397053" duration="18247000" />
+      <workItem from="1679051363014" duration="594000" />
+      <workItem from="1679064069625" duration="4521000" />
     </task>
     <servers />
   </component>

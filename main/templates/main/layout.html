@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
     <script src="https://kit.fontawesome.com/cf5ef8a0fd.js" crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/button-scripts.js' %}"></script>
     {% block css %}
     {% endblock %}
     <title>{{ title }}</title>
@@ -47,7 +48,7 @@
               </nav>
 
             <div class="search">
-            <form>
+            <form class="search-form">
               <input class="in-put" type="text" placeholder="Искать здесь...">
               <button id="button0" type="submit"></button>
             </form>
@@ -79,19 +80,6 @@
             </div>
         {% endif %}
 
-{#        <div class="nav-profile">#}
-{#            {% if user.is_anonymous %}#}
-{#                <p><li>Войти</li></p>#}
-{#                <p><li>Зарегистрироваться</li></p>#}
-{#            {% else %}#}
-{#                <p><li>Аккаунт</li></p>#}
-{#                <p><li>Создать статью</li></p>#}
-{#                <p><li>Мои статьи</li></p>#}
-{#                {% if user.is_staff %}#}
-{#                    <p><li>Админ панель</li></p>#}
-{#                {% endif %}#}
-{#            {% endif %}#}
-{#        </div>#}
     </div>
     {% block content %}
     {% endblock %}
