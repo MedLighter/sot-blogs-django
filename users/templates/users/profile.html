@@ -12,7 +12,11 @@
     </div>
     <div class="block_main_1">
         <div class="post-wrap">
-            <form class="form-block" action="{% url 'users:profile' %}" method="put">
+            <div class="logo_user">
+            <img src="{% if request.user.image %}{{ request.user.image.url }}{% else %}http://static.physoc.org/app/uploads/2019/10/09133258/Honorary-Members-placeholder.jpg {% endif %}" alt="1"/>
+                <p>{{ request.user }}</p>
+            </div>
+            <form class="form-block" action="{% url 'users:profile' %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-item">
                     <label for="{{ form.first_name.id_for_label }}">Имя:</label>
@@ -22,9 +26,10 @@
                     <label class="small mb-1" for="{{ form.last_name.id_for_label }}">Фамилия:</label>
                     {{ form.last_name }}
                 </div>
-                <div class="form-item">
+                <div class="form-item photo" style='margin-top: 30px'>
                     <label class="custom-file-upload" for="{{ form.image.id_for_label }}">Выберите изображение:</label>
                     {{ form.image }}
+                    <li>Советуем выбрать картинку квадратной формы!</li>
                 </div>
                 <div class="form-item">
                     <label for="{{ form.username.id_for_label }}">Имя пользователя:</label>
@@ -34,8 +39,12 @@
                     <label for="{{ form.email.id_for_label }}">Адрес электронной почты:</label>
                     {{ form.email }}
                 </div>
+                <div class="form-item">
+                    <label for="{{ form.about_me.id_for_label }}">О себе:</label>
+                    {{ form.about_me }}
+                </div>
 
-                <input type="submit" value="Сохранить">
+                <input class='custom-bsave' type="submit" value="Сохранить">
             </form>
         </div>
     </div>

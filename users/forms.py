@@ -17,6 +17,12 @@ class UserLoginForm(AuthenticationForm):
         fields = ('username', 'password')
 
 class UserRegistrationForm(UserCreationForm):
+    first_name = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control', 'placeholder': 'Введите имя'
+    }))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control', 'placeholder': 'Введите фамилию'
+    }))
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control', 'placeholder': 'Введите имя пользователя'
     }))
@@ -29,18 +35,23 @@ class UserRegistrationForm(UserCreationForm):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control', 'placeholder': 'Подтвердите пароль'
     }))
+    # about_me = forms.CharField(widget=forms.Textarea(attrs={}), max_length=255, required=False)
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
 
 class UserProfileForm(UserChangeForm):
-    first_name = forms.CharField(widget=forms.TextInput(attrs={
+    first_name = forms.CharField(widget=forms.TextInput(
+        attrs={
         'class': 'form-control'
-    }))
-    last_name = forms.CharField(widget=forms.TextInput(attrs={
+    }),
+        required=False)
+    last_name = forms.CharField(widget=forms.TextInput(
+        attrs={
         'class': 'form-control'
-    }))
+    }),
+        required=False)
     image = forms.ImageField(widget=forms.FileInput(
         attrs={'class': 'custom-file-input',
                'id': 'image-upload',
@@ -53,7 +64,12 @@ class UserProfileForm(UserChangeForm):
     email = forms.CharField(widget=forms.EmailInput(attrs={
         'class': 'form-control', 'readonly': True
     }))
+    about_me = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control about-me', 
+    }),
+        required=False)
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'image', 'username', 'email')
+        fields = ('first_name', 'last_name', 'image', 'username', 'email', 'about_me')
