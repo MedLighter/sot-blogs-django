@@ -71,7 +71,7 @@
             </div>
             <div class="nav-profile">
                 <li><a href="{% url 'users:profile' %}">Аккаунт</a></li>
-                <li><a href="">Создать статью</a></li>
+                <li><a href="{% url 'blogs:new_art' %}">Создать статью</a></li>
                 <li><a href="">Мои статьи</a></li>
 
                 {% if user.is_staff %}

@@ -35,11 +35,11 @@ class UserRegistrationForm(UserCreationForm):
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control', 'placeholder': 'Подтвердите пароль'
     }))
-    # about_me = forms.CharField(widget=forms.Textarea(attrs={}), max_length=255, required=False)
+    
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'about_me')
 
 class UserProfileForm(UserChangeForm):
     first_name = forms.CharField(widget=forms.TextInput(
@@ -66,7 +66,7 @@ class UserProfileForm(UserChangeForm):
     }))
     about_me = forms.CharField(widget=forms.Textarea(
         attrs={
-            'class': 'form-control about-me', 
+            'class': 'form-control about-me',
     }),
         required=False)
 

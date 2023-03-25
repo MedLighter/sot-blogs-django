@@ -16,7 +16,9 @@ class article(models.Model):
     title_article = models.CharField("Название статьи", max_length=75)
     section_id = models.ForeignKey(section, null=True, on_delete=models.PROTECT)
     text_article = models.TextField("Статья")
-    date_publish = models.DateTimeField("Дата публикации")
+    date_publish = models.DateTimeField("Дата публикации", auto_now_add=True, null=True, blank=True)
+    image = models.ImageField(upload_to='photoForArticle', null=True, blank=True)
+    
 
     def __str__(self):
         return self.title_article
@@ -26,15 +28,14 @@ class article(models.Model):
         verbose_name_plural = "Статьи"
 
 
-class photo_for_article(models.Model):
-    path = models.ImageField(upload_to='photoForArticle')
-    id_article = models.ForeignKey(article, on_delete=models.CASCADE)
+
 
 
 class comment(models.Model):
     article_id = models.ForeignKey(article, on_delete=models.CASCADE)
     author_name = models.CharField("Имя автора", max_length=50)
     comment_text = models.TextField("Текст комментария", max_length=200)
+    comment_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "Коментарий"

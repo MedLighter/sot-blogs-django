@@ -9,9 +9,27 @@
 </div>
 <div class="block_main_1">
     <div class="post-wrap">
-        <div class="post-item">
-            
-        </div>
+        <form class="form-block form-art" action="{% url 'blogs:new_art' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-item">
+                <label for="{{ form.title_article.id_for_label }}">Название статьи:</label>
+                {{ form.title_article }}
+            </div>
+            <div class="form-item">
+                <label for="{{ form.text_article.id_for_label }}">Текст статьи:</label>
+                {{ form.text_article }}
+            </div>
+            <div class="form-item photo" style='margin-top: 30px'>
+                <label class="custom-file-upload" for="{{ form.image.id_for_label }}">Выберите изображение для статьи:</label>
+                {{ form.image }}
+            </div>
+            <div class="form-item" style='margin-top: 30px'>
+                <label for="{{ form.section_id.id_for_label }}">Выберите раздел подходящий вашей статье:</label>
+                {{ form.section_id }}
+            </div>
+
+            <input class='custom-bsave' type="submit" value="Сохранить">
+        </form>
     </div>
 </div>
 {% endblock %}

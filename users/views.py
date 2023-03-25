@@ -41,8 +41,8 @@ def registration(request):
 
 
 def profile(request):
-    print(request.user)
     if request.method == 'POST':
+        print(request.POST)
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
