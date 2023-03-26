@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="blockmain">
+        <div class="headname">
+            <p>Новости</p>
+        </div>
+    </div>
+    <div class="block_main_1">
+        <div class="post-wrap">
+            <div class="post-item">
+                <div class="item-content">
+                    <div class="item-icon-group"></div>
+                    <div class="item-body">
+                        <div class="row">
+                            <h3><big>{{ article.title_article }}</big></h3>
+                            <div class='from-name'><p>От: {{ article.user_creator.username }}</p></div>
+                        </div>
+                        <div class="text_new">
+                            <p>{{ article.text_article }}</p>
+                        </div>
+                        <img class="img_for_art" src="{{ article.image.url }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

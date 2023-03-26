@@ -8,19 +8,34 @@
         </div>
     </div>
     <div class="block_main_1">
+        {% for item in articles %}
         <div class="post-wrap">
             <div class="post-item">
                 <div class="item-content">
                     <div class="item-icon-group"></div>
                     <div class="item-body">
                         <div class="row">
-                            <h3>Название статьи</h3>
-                            <div class='from-name'><p>От: кто-то</p></div>
+                            <h3><big>{{ item.title_article }}</big></h3>
+                            <div class='from-name'><p>От: {{ item.user_creator.username }}</p></div>
                         </div>
-                        <p>Текст статьи</p>
+                        <div class="text_new">
+                            <p>{{ item.text_article|slice:":500" }}{% if item.text_article|length > 500 %}...{% endif %}</p>
+                            {% if item.text_article|length > 500 %}
+                                <button class="button_news">
+                                    <a class="btn" href="{% url 'blogs:article_detail' item.id %}"><span>Читать далее</span></a>
+                                </button>
+                            {% endif %}
+                        </div>
+                        <hr/>
+                        {% if item.image %}
+                        <center>
+                            <img class="img_for_art" src="{{ item.image.url }}">
+                        </center>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 {% endblock %}

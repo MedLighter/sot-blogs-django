@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+        button.style.display = "none";
     });
 });
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+        button.style.display = "none";
     });
 });
 
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+        button.style.display = "none";
     });
 });
 
@@ -43,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+        button.style.display = "none";
     });
 });
 
@@ -52,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+        button.style.display = "none";
     });
 });
 
