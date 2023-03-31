@@ -13,6 +13,7 @@ def news(request):
     }
     return render(request, 'blogs/news.html', context)
 
+
 def new_art(request):
     if request.method == "POST":
         form = UserCreateArtForm(request.POST, request.FILES)
@@ -34,3 +35,20 @@ def new_art(request):
 def article_detail(request, article_id):
     article_detail = get_object_or_404(article, id=article_id)
     return render(request, 'blogs/article_detail.html', {'article': article_detail})
+
+
+def personal_article(request):
+    articles = article.objects.filter(user_creator=request.user)
+    context = {
+        'title': 'Мои статьи',
+        'articles': articles,
+    }
+    return render(request, 'blogs/personal_article.html', context)
+
+
+def delete_article(request, article_id):
+    print(request.META)
+    article_persone = article.objects.get(id=article_id)
+    if article_persone.user_creator == request.user:
+        article_persone.delete()
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

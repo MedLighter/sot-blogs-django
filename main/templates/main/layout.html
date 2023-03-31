@@ -72,7 +72,7 @@
             <div class="nav-profile">
                 <li><a href="{% url 'users:profile' %}">Аккаунт</a></li>
                 <li><a href="{% url 'blogs:new_art' %}">Создать статью</a></li>
-                <li><a href="">Мои статьи</a></li>
+                <li><a href="{% url 'blogs:personal_article' %}">Мои статьи</a></li>
 
                 {% if user.is_staff %}
                     <li><a href="{% url 'admin:index' %}">Админ панель</a></li>

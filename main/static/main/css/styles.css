@@ -771,7 +771,7 @@ button {
 @media (min-width: 960px) {
   .post-item {
     flex-basis: 119.5%;
-    width: 1200px;
+    width: 1260px;
   }
 }
 
@@ -1080,7 +1080,7 @@ label{
 }
 
 .button_news{
-    padding-right: 30px;
+    /* padding-right: 30px; */
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -1091,9 +1091,9 @@ label{
     background-color: rgba(0, 3, 63, 0);
     border-color: rgba(0, 3, 63, 0);
     position: relative;
-    left: 80%;
+    /* left: 80%; */
     top: 15px;
-    padding-bottom: 6px;
+    /* padding-bottom: 6px; */
 }
 
 .img_for_art{
@@ -1108,6 +1108,7 @@ hr {
     border-top: 1px solid #ccc;
     margin: 2em 0;
     padding: 0;
+    margin-top:7%;
 }
 
 select{
@@ -1144,7 +1145,30 @@ select{
     transition: opacity .15s linear;
 }
 
+/* personal_news */
 
+.buttons_for_article{
+  /* flex: box; */
+  float: right;
+}
+
+
+.button_delete{
+  /* padding-right: 30px; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  color: #cc0000;
+  cursor: pointer;
+  background-color: rgba(63, 0, 0, 0);
+  border-color: rgba(63, 0, 0, 0);
+  position: relative;
+  /* left: 70%; */
+  top: 15px;
+  /* padding-bottom: 6px; */
+}
 
 
 
