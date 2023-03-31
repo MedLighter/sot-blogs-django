@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import HttpResponseRedirect, render, get_object_or_404
 from .forms import UserCreateArtForm
 from .models import section, article, comment
@@ -18,6 +19,7 @@ def new_art(request):
         if form.is_valid():
             form.instance.user_creator = request.user
             form.save()
+            messages.success(request, 'Вы успешно создали статью!')
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
         form = UserCreateArtForm()

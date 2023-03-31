@@ -9,6 +9,14 @@
 </div>
 <div class="block_main_1">
     <div class="post-wrap">
+        {% if messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert"
+                        style="margin-top: -8px;">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
         <form class="form-block form-art" action="{% url 'blogs:new_art' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-item">
