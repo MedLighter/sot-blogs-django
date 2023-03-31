@@ -575,6 +575,16 @@ body {
   margin-top: -200px;
 }
 
+.item-body-for-art {
+  
+  color: #F5E2CD;
+  font-size: 17px;
+  padding: inherit;
+  /* margin: 50px; */
+  margin: 50px 50px 0 50px;
+  margin-top: -200px;
+}
+
 #box * {
   animation: fadeInFromNone 1s ease-in-out;
   animation-fill-mode: forwards;
@@ -1081,8 +1091,9 @@ label{
     background-color: rgba(0, 3, 63, 0);
     border-color: rgba(0, 3, 63, 0);
     position: relative;
-    left: 86%;
-    top: 40px;
+    left: 80%;
+    top: 15px;
+    padding-bottom: 6px;
 }
 
 .img_for_art{
@@ -1095,7 +1106,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 2em 0;
     padding: 0;
 }
 
