@@ -140,7 +140,7 @@ form {
   width: 250px;
   height: 42px;
   padding-left: 15px;
-  margin-right: 50px;
+  margin-right: 106px;
   border-radius: 42px;
   border: 2px solid #00033f;
   background: #151718;
@@ -254,6 +254,11 @@ form {
   background: rgba(21, 23, 24, 0.65);
   border-radius: 15px;
 }
+
+.no_art{
+    color: #c6a689;
+}
+
 
 .search-form{
   margin-top: -40px;

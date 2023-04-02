@@ -8,6 +8,13 @@
         </div>
     </div>
     <div class="block_main_1">
+
+        {% if not articles %}
+            <div class="post-wrap">
+                <p class="no_art">В данный момент на сайте нет опубликованных пользователями статей</p>
+            </div>
+        {% endif %}
+
         {% for item in articles %}
         <div class="post-wrap">
             <div class="post-item">
