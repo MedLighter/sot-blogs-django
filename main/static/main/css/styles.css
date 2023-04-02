@@ -744,11 +744,36 @@ button {
     color: #F5E2CD;
 }
 
+.btn_delete{
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 8px;
+    max-width: 200px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
+    border: solid;
+    color: #F5E2CD;
+}
+
+
 .btn:hover{
   color: #d67c27;
   -webkit-transition: all 0.2s ease-in-out !important;
   transition: all 0.2s ease-in-out !important;
 }
+
+.btn_delete:hover{
+  color: #cc0000;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
 
 .link span {
   display: inline-block;

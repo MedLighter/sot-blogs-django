@@ -28,9 +28,9 @@
                         </div>
 
                         <div class="buttons_for_article">
-                            {% if user == item.user_creator.username %}
+                            {% if user == item.user_creator %}
                                 <button class="button_delete">
-                                    <a class="btn" href="{% url 'blogs:delete_article' item.id %}"><span>Удалить статью</span></a>
+                                    <a class="btn_delete" href="{% url 'blogs:delete_article' item.id %}"><span>Удалить статью</span></a>
                                 </button>
                             {% endif %}
                             {% if item.text_article|length > 500 %}
