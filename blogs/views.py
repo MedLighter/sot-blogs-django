@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import HttpResponseRedirect, render, get_object_or_404
-from .forms import UserCreateArtForm
+from .forms import UserCreateArtForm, UserCreateCommentForm
 from .models import section, article, comment
 
 
@@ -34,7 +34,21 @@ def new_art(request):
 
 def article_detail(request, article_id):
     article_detail = get_object_or_404(article, id=article_id)
-    return render(request, 'blogs/article_detail.html', {'article': article_detail})
+    comment_for_art = comment.objects.filter(article_id = article_id)
+    if request.method == 'POST':
+        form = UserCreateCommentForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    else:
+        form = UserCreateCommentForm
+        
+    context = {
+        'article': article_detail,
+        'comment': comment_for_art,
+        'form': form
+    }
+    return render(request, 'blogs/article_detail.html', context)
 
 
 def personal_article(request):
