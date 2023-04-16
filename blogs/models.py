@@ -23,7 +23,7 @@ class article(models.Model):
     
 
     def __str__(self):
-        return self.title_article
+        return self.title_article   
 
     class Meta:
         verbose_name = "Статья"
@@ -44,4 +44,4 @@ class comment(models.Model):
         verbose_name_plural = "Коментарии"
 
     def __str__(self):
-        return self.author_name
+        return f'{self.user_message.username} | {self.article_id.title_article} | {self.comment_text[:30]}'

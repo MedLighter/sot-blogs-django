@@ -27,7 +27,7 @@ class UserCreateArtForm(forms.ModelForm):
 class UserCreateCommentForm(forms.ModelForm):
     comment_text = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'form-control com-for-art ',
-        'oninput': 'autoResize(this)'
+        'oninput': 'autoResize(this)',
     }))
 
 

@@ -38,10 +38,14 @@ def article_detail(request, article_id):
     if request.method == 'POST':
         form = UserCreateCommentForm(data=request.POST)
         if form.is_valid():
+            form.instance.user_message = request.user
+            print(request.user)
+            form.article_id = article.objects.filter(id = article_id)
+            
             form.save()
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
-        form = UserCreateCommentForm
+        form = UserCreateCommentForm()
         
     context = {
         'article': article_detail,

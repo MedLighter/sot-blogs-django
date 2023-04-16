@@ -63,6 +63,12 @@
         {% comment %} height: 150px; {% endcomment %}
         resize: none;
     }
+
+    .text_comment{
+        word-wrap: break-word;
+        width: 1040px;
+        text-indent: 20px;
+    }
 </style>
 
 <div class="blockmain">
@@ -112,16 +118,17 @@
                     <br>
                     <div class="comment" id="comment" style="border-radius: 0 0 10px 10px;">
                         {% if not not comment %}
-                            <p>На данный момент комментраиев к данной статье не существует.</p>
-                        {% else %}
                             {% for com in comment%}    
                                 <div class="persona_for_com">
-                                    <img src="{{ com.user_message.image.url }}" weight="40px" height="40px">
+                                    <img src=" {% if com.user_message.image %} {{ com.user_message.image.url }} {% else %} http://static.physoc.org/app/uploads/2019/10/09133258/Honorary-Members-placeholder.jpg {% endif %}" weight="40px" height="40px">
+                                    <p>{{ com.user_message.username }}</p>
                                 </div>
                                 <div class="text_com">
-                                    <p>{{ com.comment_text }}</p>
+                                    <p class="text_comment">{{ com.comment_text }}</p>
                                 </div>
                             {% endfor %}
+                        {% else %}
+                            <p>На данный момент комментраиев к данной статье не существует.</p>
                         {% endif %}
                     </div>
                 </div>
@@ -132,7 +139,7 @@
 </div>
 <script>
     function autoResize(element) {
-        element.style.height = "100px";
+        element.style.height = "45px";
         element.style.height = (element.scrollHeight) + "px";
         element.style.width = "880px";
         element.style.width = (element.scrollWidth) + "px";
