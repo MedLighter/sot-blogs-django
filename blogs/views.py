@@ -40,13 +40,13 @@ def article_detail(request, article_id):
         if form.is_valid():
             form.instance.user_message = request.user
             print(request.user)
-            form.article_id = article.objects.filter(id = article_id)
+            form.instance.article_id = article_detail
             
             form.save()
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
         form = UserCreateCommentForm()
-        
+    print(reversed(comment_for_art))
     context = {
         'article': article_detail,
         'comment': comment_for_art,
@@ -69,4 +69,11 @@ def delete_article(request, article_id):
     article_persone = article.objects.get(id=article_id)
     if article_persone.user_creator == request.user:
         article_persone.delete()
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    
+    
+def delete_comment(request, comment_id):
+    comment_ = comment.objects.get(id=comment_id)
+    if comment_.user_message == request.user:
+        comment_.delete()
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

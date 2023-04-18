@@ -1,6 +1,10 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+{% endblock %}
+
 {% block content %}
 
 <style>
@@ -39,7 +43,6 @@
     #comment {
         display: flex;
         flex-direction: column;
-        align-items: center;
         background: linear-gradient(135deg, #01706b 0%, #0e447a 100%);
         padding: 20px;
         border-radius: 10px;
@@ -67,7 +70,6 @@
     .text_comment{
         word-wrap: break-word;
         width: 1040px;
-        text-indent: 20px;
     }
 </style>
 
@@ -117,14 +119,24 @@
                     </div>
                     <br>
                     <div class="comment" id="comment" style="border-radius: 0 0 10px 10px;">
-                        {% if not not comment %}
-                            {% for com in comment%}    
-                                <div class="persona_for_com">
-                                    <img src=" {% if com.user_message.image %} {{ com.user_message.image.url }} {% else %} http://static.physoc.org/app/uploads/2019/10/09133258/Honorary-Members-placeholder.jpg {% endif %}" weight="40px" height="40px">
-                                    <p>{{ com.user_message.username }}</p>
-                                </div>
-                                <div class="text_com">
-                                    <p class="text_comment">{{ com.comment_text }}</p>
+                        {% if comment %}
+                            {% for com in comment|slice:"::-1" %}
+                                <div class="comment_block">
+                                    <div class="persona_for_com">
+                                        <img style="border-radius: 20px"
+                                        src=" {% if com.user_message.image %} {{ com.user_message.image.url }} {% else %} http://static.physoc.org/app/uploads/2019/10/09133258/Honorary-Members-placeholder.jpg {% endif %}" weight="40px" height="40px">
+                                        
+                                    </div>
+                                    <div class="text_com">
+                                        <p class="username-for-comment">{{ com.user_message.username }}</p>
+                                        <p class="text_comment">{{ com.comment_text|linebreaksbr }}</p>
+                                    </div>
+                                    <div class="last-row" style="{% if com.user_message == request.user %}justify-content: space-between;{% else %}flex-direction: row;{% endif %}">
+                                        <p style="float: right;">{{ com.comment_date }}</p>
+                                        {% if com.user_message == request.user %}
+                                            <a href="{% url 'blogs:delete_comment' com.id %}" title='Удалить комментарий'><i style="font-size: 17px;" class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        {% endif %}
+                                    </div>
                                 </div>
                             {% endfor %}
                         {% else %}

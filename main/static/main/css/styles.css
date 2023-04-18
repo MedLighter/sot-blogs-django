@@ -528,7 +528,7 @@ form {
 }
 
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif, monospace;
   background: url(../img/header.png) repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -671,6 +671,7 @@ body {
 
 .item-body p {
   transition-delay: .1s;
+  font-family: monospace;
 }
 
 .item-footer {
@@ -1120,7 +1121,8 @@ label{
     border-color: rgba(0, 3, 63, 0);
     position: relative;
     /* left: 80%; */
-    top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     /* padding-bottom: 6px; */
 }
 
@@ -1195,21 +1197,51 @@ select{
   border-color: rgba(63, 0, 0, 0);
   position: relative;
   /* left: 70%; */
-  top: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   /* padding-bottom: 6px; */
 }
 
 
-/* .com-for-art{
-  flex:1; 
-  width:880px; 
-  height: 100px; 
-  resize: none;
-} */
+.persona_for_com{
+  float: left;
+}
 
+.comment_block{
+  border-color: #000000;
+  margin-bottom: 20px;
+}
 
+.text_new p {
+  text-indent: 1.5em;
+}
 
+.comment_block{
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to left, #36fff5, #2993fd) 1;
+  padding: 5px 0 5px 0;
+}
 
+.username-for-comment{
+  padding-left: 60px;
+  color: #000000;
+}
+
+.last-row{
+  margin-top: 15px;
+  display: flex;
+}
+
+.last-row a {
+  text-decoration: none;
+  color: #F5E2CD;
+}
+
+.comment_block p{
+  padding-left: 60px;
+  padding-right: 20px;
+}
 
 
 /* cyrillic-ext */

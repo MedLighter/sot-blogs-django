@@ -13,7 +13,7 @@
                 <p class="no_art">В данный момент Вы не написали ни одну статью</p>
             </div>
         {% endif %}
-        {% for item in articles %}
+        {% for item in articles|slice:"::-1" %}
         <div class="post-wrap">
             <div class="post-item">
                 <div class="item-content">
@@ -24,7 +24,7 @@
                             <div class='from-name'><p>От: {{ item.user_creator.username }}</p></div>
                         </div>
                         <div class="text_new">
-                            <p>{{ item.text_article|slice:":500" }}{% if item.text_article|length > 500 %}...{% endif %}</p>
+                            <p>{{ item.text_article|slice:":500"|linebreaksbr }}{% if item.text_article|length > 500 %}...{% endif %}</p>
                         </div>
 
                         <div class="buttons_for_article">

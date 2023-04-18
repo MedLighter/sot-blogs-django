@@ -14,7 +14,7 @@ class section(models.Model):
 
 
 class article(models.Model):
-    title_article = models.CharField("Название статьи", max_length=75)
+    title_article = models.CharField("Название статьи", max_length=90)
     section_id = models.ForeignKey(section, null=True, verbose_name='Раздел', on_delete=models.PROTECT)
     text_article = models.TextField("Статья")
     date_publish = models.DateTimeField("Дата публикации", auto_now_add=True, null=True, blank=True)
