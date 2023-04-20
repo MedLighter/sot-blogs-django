@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="text_new">
-                        <p>{{ article.text_article }}</p>
+                        <p>{{ article.text_article|linebreaksbr|urlize }}</p>
                     </div>
                     {% if article.image %}
                     <hr />

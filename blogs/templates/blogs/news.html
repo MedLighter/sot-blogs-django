@@ -26,7 +26,7 @@
                             <div class='from-name'><p>От: {{ item.user_creator.username }}</p></div>
                         </div>
                         <div class="text_new">
-                            <p>{{ item.text_article|slice:":500"|linebreaksbr }}{% if item.text_article|length > 500 %}...{% endif %}</p>
+                            <p>{{ item.text_article|slice:":500"|linebreaksbr|urlize }}{% if item.text_article|length > 500 %}...{% endif %}</p>
                             <div class="buttons_for_article">
                                 <button class="button_news">
                                     <a class="btn" href="{% url 'blogs:article_detail' item.id %}"><span>Читать подробно</span></a>

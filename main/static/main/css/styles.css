@@ -240,9 +240,13 @@ form {
   /* line-height: 30px; */
   text-align: center;
   color: #C6A689;
-  left: 32%;
+  left: 30%;
   top: 50px;
   z-index: 1;
+}
+
+.text_new a {
+  color: #C6A689;
 }
 
 .block_main_1 {
